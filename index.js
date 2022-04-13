@@ -20,7 +20,7 @@ const sql_create = ` CREATE TABLE IF NOT EXISTS Books (
 
 db.run(sql_create, err => {
     if (err) {
-        return console.log(err.message);
+        console.log(err.message);
     }
 
     console.log('Successful creation of the \'Books\' table');
@@ -49,8 +49,8 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
 
-app.listen(3000, () => {
-    console.log('The app was successfully run on http://localhost:3000/');
+app.listen(3030, () => {
+    console.log('The app was successfully run on http://localhost:3030/');
 });
 
 app.get('/', (req, res) => {
